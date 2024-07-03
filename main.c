@@ -50,6 +50,7 @@ int create_file_c(char *name_project) {
   char *compile_text = "#include <stdio.h>\n"
                        "int main(int argc, char *argv[]) { printf("
                       "\"hello world\""
+
                        ")\n; }";
   fprintf(compile_file, "%s", compile_text);
   fclose(compile_file);
@@ -59,7 +60,7 @@ int create_file_c(char *name_project) {
 int main() {
   char name_project[150];
   printf("Enter the name of your project: ");
-  scanf("%s", name_project); // No need to limit scanf with a length
+  scanf("%s", name_project);
 
   create_folder(name_project);
   create_file_compile(name_project);
